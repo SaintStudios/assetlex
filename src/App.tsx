@@ -2,6 +2,8 @@ import { HeaderMorph } from "./components/ui/HeaderMorph";
 import { Button } from "./components/ui/Button";
 import { nav } from "./content/copy";
 import { Hero } from "./sections/Hero";
+import { ProofShot } from "./sections/ProofShot";
+import { DashboardGrid } from "./sections/DashboardGrid";
 import { Footer } from "./sections/Footer";
 
 export default function App() {
@@ -34,6 +36,8 @@ export default function App() {
 
       <main className="mx-auto flex max-w-[76rem] flex-col gap-12 px-4 pb-12 sm:gap-20 sm:px-6 sm:pb-20">
         <Hero />
+        <ProofShot />
+        <DashboardGrid />
       </main>
 
       <Footer />
