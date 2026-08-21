@@ -62,6 +62,9 @@ export function Footer() {
         </div>
         <p className="mt-12 text-xs text-muted-foreground">{footer.copyright}</p>
       </div>
+      <div aria-hidden="true" className="pointer-events-none select-none overflow-hidden">
+        <p className="wordmark pointer-events-auto">AssetLex</p>
+      </div>
     </footer>
   );
 }
