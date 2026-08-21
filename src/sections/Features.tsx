@@ -6,7 +6,6 @@ import {
   SearchIcon,
   SparkleIcon,
 } from "../components/ui/icons";
-import type { ReactNode } from "react";
 import { features } from "../content/copy";
 
 const ICONS = [SearchIcon, CalendarIcon, FileIcon, ArchiveIcon, SparkleIcon];
