@@ -4,6 +4,10 @@ import { nav } from "./content/copy";
 import { Hero } from "./sections/Hero";
 import { ProofShot } from "./sections/ProofShot";
 import { DashboardGrid } from "./sections/DashboardGrid";
+import { Features } from "./sections/Features";
+import { Portfolio } from "./sections/Portfolio";
+import { Steps } from "./sections/Steps";
+import { BlogTeaser } from "./sections/BlogTeaser";
 import { Footer } from "./sections/Footer";
 
 export default function App() {
@@ -38,6 +42,10 @@ export default function App() {
         <Hero />
         <ProofShot />
         <DashboardGrid />
+        <Features />
+        <Portfolio />
+        <Steps />
+        <BlogTeaser />
       </main>
 
       <Footer />
