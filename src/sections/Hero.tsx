@@ -9,8 +9,9 @@ export function Hero() {
         {hero.eyebrow}
       </Reveal>
       <Reveal delay={80}>
-        <h1 className="mx-auto mt-6 max-w-[22ch] text-balance text-[clamp(34px,5.4vw,58px)] font-medium leading-[1.05] tracking-tight">
-          {hero.titleLead}{" "}
+        <h1 className="mx-auto mt-6 text-balance text-[clamp(34px,5.4vw,58px)] font-medium leading-[1.05] tracking-tight">
+          {hero.titleLead}
+          <br />
           <span className="font-normal text-muted-foreground">{hero.titleMuted}</span>
         </h1>
       </Reveal>

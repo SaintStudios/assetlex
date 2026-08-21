@@ -12,7 +12,7 @@ export const nav = {
 
 export const hero = {
   eyebrow: "Betreiberpflichten · Endlich im Griff",
-  titleLead: "Betreiberpflichten für Immobilien —",
+  titleLead: "Betreiberpflichten für Immobilien",
   titleMuted: "alles an einem Ort verwaltet.",
   sub: "Alle Prüfpflichten gebündelt in einer Kennzahl.",
   ctaPrimary: "Kostenlos testen",
