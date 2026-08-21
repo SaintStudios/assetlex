@@ -62,7 +62,8 @@ export const obligations: Obligation[] = [
 ];
 
 export const dashboardGrid = {
-  heading: "AssetLex Dashboard. Alles sofort im Blick.",
+  eyebrow: "AssetLex Dashboard",
+  heading: "Alles sofort im Blick.",
   cards: [
     {
       title: "Portfolio-Status",
@@ -99,7 +100,8 @@ export const dashboardGrid = {
 };
 
 export const features = {
-  heading: "AssetLex: mehr als eine Fristenliste.",
+  eyebrow: "AssetLex",
+  heading: "Mehr als eine Fristenliste.",
   items: [
     {
       title: "Lückenanalyse statt Fristenliste",

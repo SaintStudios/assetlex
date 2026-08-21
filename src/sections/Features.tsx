@@ -1,31 +1,61 @@
-import { SquircleCard } from "../components/ui/SquircleCard";
 import { Reveal } from "../components/ui/Reveal";
+import {
+  ArchiveIcon,
+  CalendarIcon,
+  FileIcon,
+  SearchIcon,
+  SparkleIcon,
+} from "../components/ui/icons";
+import type { ReactNode } from "react";
 import { features } from "../content/copy";
 
-/** „AssetLex: mehr als eine Fristenliste.“ — five feature plates. */
+const ICONS = [SearchIcon, CalendarIcon, FileIcon, ArchiveIcon, SparkleIcon];
+
+/** „Mehr als eine Fristenliste.“ — one quiet plate of rows, KI carries the accent. */
 export function Features() {
   return (
-    <section>
-      <Reveal as="h2" className="text-balance text-center text-[clamp(24px,3vw,34px)] font-medium tracking-tight">
-        {features.heading}
+    <section className="mx-auto w-full max-w-[64rem]">
+      <Reveal>
+        <p className="text-xs uppercase tracking-[0.12em] text-muted-foreground">
+          {features.eyebrow}
+        </p>
+        <h2 className="mt-3 max-w-[24ch] text-balance text-[clamp(24px,3vw,34px)] font-medium tracking-tight">
+          {features.heading}
+        </h2>
       </Reveal>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {features.items.map((item, i) => (
-          <Reveal
-            key={item.title}
-            delay={(i % 2) * 80}
-            className={i === features.items.length - 1 ? "sm:col-span-2" : undefined}
-          >
-            <SquircleCard
-              title={item.title}
-              className="h-full"
-              contentClassName="flex min-h-36 flex-col justify-center p-5"
-            >
-              <p className="max-w-[70ch] text-sm leading-6 text-muted-foreground">{item.body}</p>
-            </SquircleCard>
-          </Reveal>
-        ))}
-      </div>
+
+      <Reveal delay={80}>
+        <div className="mt-6 rounded-[22px] border border-border bg-card p-2 shadow-[0_1px_2px_rgba(0,0,0,0.06)] [corner-shape:squircle] sm:rounded-[44px] sm:p-3">
+          <ul role="list" className="flex flex-col">
+            {features.items.map((item, i) => {
+              const Icon = ICONS[i];
+              const isFlagship = i === ICONS.length - 1;
+              return (
+                <li
+                  key={item.title}
+                  className="group flex items-start gap-4 rounded-[18px] p-4 transition-colors hover:bg-accent sm:items-center sm:gap-5 sm:p-5 [&:not(:first-child)]:border-t [&:not(:first-child)]:border-border"
+                >
+                  <span
+                    className={`flex size-10 shrink-0 items-center justify-center rounded-full ${
+                      isFlagship
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-foreground/70"
+                    }`}
+                  >
+                    <Icon className="size-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-medium leading-snug">{item.title}</h3>
+                    <p className="mt-1 max-w-[70ch] text-sm leading-6 text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </Reveal>
     </section>
   );
 }
