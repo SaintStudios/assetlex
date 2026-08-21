@@ -20,7 +20,7 @@ export function HeaderMorph({ children }: { children: ReactNode }) {
   return (
     <header
       data-scrolled={scrolled}
-      className="group sticky top-0 z-40 h-14 sm:h-20"
+      className="group sticky top-0 z-40 h-[68px] pt-3 sm:h-24 sm:pt-4"
     >
       <div
         className={cn(
