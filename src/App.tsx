@@ -8,6 +8,10 @@ import { Features } from "./sections/Features";
 import { Portfolio } from "./sections/Portfolio";
 import { Steps } from "./sections/Steps";
 import { BlogTeaser } from "./sections/BlogTeaser";
+import { Comparison } from "./sections/Comparison";
+import { Pricing } from "./sections/Pricing";
+import { Faq } from "./sections/Faq";
+import { ClosingCta } from "./sections/ClosingCta";
 import { Footer } from "./sections/Footer";
 
 export default function App() {
@@ -46,6 +50,10 @@ export default function App() {
         <Portfolio />
         <Steps />
         <BlogTeaser />
+        <Comparison />
+        <Pricing />
+        <Faq />
+        <ClosingCta />
       </main>
 
       <Footer />
