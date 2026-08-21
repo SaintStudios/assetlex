@@ -1,5 +1,5 @@
 /**
- * The seven springs of the oa-design vocabulary, in `motion` format.
+ * The seven springs of the AssetLex design vocabulary, in `motion` format.
  * Do not invent an eighth. Micro fades are plain CSS (≤0.2s ease-out).
  */
 import type { Transition } from "motion/react";
