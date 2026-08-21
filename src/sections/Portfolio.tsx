@@ -16,11 +16,13 @@ export function Portfolio() {
       </Reveal>
 
       <Reveal delay={80}>
-        <div className="mx-auto mt-8 flex max-w-md items-stretch justify-between gap-6 rounded-full border border-border bg-card px-8 py-4 shadow-[0_1px_2px_rgba(0,0,0,0.06)] [corner-shape:squircle] sm:max-w-lg">
+        <div className="mx-auto mt-8 grid w-fit max-w-full grid-cols-3 items-center gap-3 rounded-full border border-border bg-card px-6 py-4 shadow-[0_1px_2px_rgba(0,0,0,0.06)] [corner-shape:squircle] sm:gap-6 sm:px-10">
           {portfolio.stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-xl font-medium tabular-nums tracking-tight">{s.value}</p>
-              <p className="mt-0.5 text-xs text-muted-foreground">{s.label}</p>
+              <p className="mt-0.5 whitespace-nowrap text-xs leading-5 text-muted-foreground">
+                {s.label}
+              </p>
             </div>
           ))}
         </div>
