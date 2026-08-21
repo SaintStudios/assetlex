@@ -5,7 +5,7 @@ export function StatDot({
   tone,
   className,
 }: {
-  tone: "overdue" | "soon" | "ok";
+  tone: "overdue" | "soon" | "ok" | "missing";
   className?: string;
 }) {
   return (
@@ -16,6 +16,7 @@ export function StatDot({
         tone === "overdue" && "bg-destructive",
         tone === "soon" && "bg-warning",
         tone === "ok" && "bg-success",
+        tone === "missing" && "bg-muted-foreground/50",
         className,
       )}
     />
