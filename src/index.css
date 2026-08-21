@@ -104,18 +104,20 @@ pre {
   font-family: var(--font-mono);
 }
 
-/* Giant closing wordmark: outlined in the ink-12% border token, baseline
-   cropped by the page end, fills faintly with the accent on hover. */
+/* Giant closing wordmark set in Geist Mono — the product's data voice.
+   Outlined in the ink-12% border token, baseline cropped by the page end,
+   fills faintly with the accent on hover. */
 .wordmark {
-  font-size: clamp(4.5rem, 17.5vw, 16rem);
+  font-family: var(--font-mono);
   font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  font-size: clamp(3rem, 18.5vw, 13.5rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   color: transparent;
   -webkit-text-stroke: 1px var(--border);
-  margin-bottom: -0.16em;
+  margin-bottom: -0.12em;
   transition: color 0.7s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .wordmark:hover {
