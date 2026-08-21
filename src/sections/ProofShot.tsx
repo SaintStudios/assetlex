@@ -95,16 +95,16 @@ export function ProofShot() {
             <div role="status" aria-label="Prüfpflichten im Portfolio">
               <div
                 aria-hidden="true"
-                className="hidden grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_max-content] gap-x-6 px-3 pb-1 pt-2 text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:grid"
+                className="hidden grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_11rem] gap-x-6 px-3 pb-1 pt-2 text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:grid"
               >
                 <span>Anlage &amp; Standort</span>
                 <span>Rechtsgrundlage</span>
-                <span>Status</span>
+                <span className="justify-self-end">Status</span>
               </div>
               {obligations.map((o) => (
                 <div
                   key={o.name}
-                  className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-6 gap-y-0.5 rounded-md px-3 py-3 transition-colors hover:bg-accent sm:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_max-content]"
+                  className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-6 gap-y-0.5 rounded-md px-3 py-3 transition-colors hover:bg-accent sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_11rem]"
                 >
                   <div className="col-start-1 row-start-1 flex min-w-0 items-center gap-2.5">
                     <StatDot tone={o.tone} />
@@ -118,7 +118,7 @@ export function ProofShot() {
                   </span>
                   <span
                     className={cn(
-                      "col-start-2 row-start-1 whitespace-nowrap text-[13px] font-medium tabular-nums sm:col-start-3",
+                      "col-start-2 row-start-1 whitespace-nowrap text-right text-[13px] font-medium tabular-nums sm:col-start-3 sm:justify-self-end",
                       statusTextClass[o.tone],
                     )}
                   >
