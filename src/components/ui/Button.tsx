@@ -12,7 +12,6 @@ import { cn } from "../../lib/cn";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "sm" | "xs";
-type As = "button" | "a";
 
 const BASE =
   "inline-flex cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap rounded-full font-medium outline-none transition-all " +
